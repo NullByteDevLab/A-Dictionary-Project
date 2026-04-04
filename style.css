@@ -15,36 +15,36 @@ body {
   line-height: 1.6;
 }
 
-/* Container */
+
 .container {
   width: 95%;
   max-width: 620px;
   margin: 0 auto;
-  flex: 1;                    /* Allows footer to be pushed down */
+  flex: 1;                    
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-/* Card */
+
 .card {
   background: #1e293b;
-  padding: 20px 20px;
+  padding: 32px 28px;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 20px;
 }
 
 .card h1 {
   text-align: center;
-  font-size: 1.9rem;
+  font-size: 2.1rem;
   color: #f1f5f9;
   font-weight: 700;
 }
 
-/* Search */
+
 input#search {
   padding: 16px 20px;
   border-radius: 10px;
@@ -58,6 +58,9 @@ input#search {
 
 input#search::placeholder {
   color: #64748b;
+}
+input#search:focus{
+  border: 1px solid #3b82f6;
 }
 
 button#SearchBtn {
@@ -77,7 +80,7 @@ button#SearchBtn:hover {
   transform: translateY(-2px);
 }
 
-/* Term */
+
 #term {
   text-align: center;
   margin: 20px 0 12px;
@@ -86,7 +89,7 @@ button#SearchBtn:hover {
   font-weight: 500;
 }
 
-/* Results */
+
 .results {
   margin-top: 12px;
 }
@@ -127,9 +130,36 @@ audio {
   width: 100%;
 }
 
-/* Error */
+.spiner{
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background: rgba(10, 25, 28, .3);
+  margin: 10px auto;
+  animation: spin .6s linear infinite;
+  border: 3px solid #70C1EF;
+}
+
+@keyframes spin {
+  0% {
+    border-left-color: #3b82f6;
+    transform: rotate(0deg);
+    border-style: solid;
+  }
+  50% {
+    border-left-color: #3b82f6;
+    transform: rotate(180deg);
+    border-style: solid;
+  }
+  100% {
+    border-left-color: #3b82f6;
+    transform: rotate(360deg);
+    border-style: solid;
+  }
+}
+
 .error {
-  margin: 20px auto;
+  margin: 20px auto 0;
   color: #f87171;
   border: 2px solid #f87171;
   border-radius: 10px;
@@ -177,7 +207,7 @@ footer a:hover {
 
 @media (max-width: 400px) {
   .card {
-    padding: 24px 20px;
+    padding: 20px 18px;
   }
   .card h1 {
     font-size: 1.85rem;
